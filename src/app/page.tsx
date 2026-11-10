@@ -1,7 +1,7 @@
 import { Cctv } from "lucide-react";
 import RouteForm from "@/components/route-form";
 import CameraList from "@/components/camera-list";
-import MapPlaceholder from "@/components/map-placeholder";
+import Map from "@/components/map";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         </aside>
 
         <main className="min-h-80 flex-1 p-4">
-          <MapPlaceholder />
+          <Map/>
         </main>
       </div>
     </div>
