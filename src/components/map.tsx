@@ -6,7 +6,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 const accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
-export default function MapPlaceholder() {
+export default function Map() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mapError, setMapError] = useState<string | null>(null);
 
