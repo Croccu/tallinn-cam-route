@@ -119,7 +119,9 @@ export default function AddressInput({
 
   // Only show results that belong to the current query, never stale ones.
   const suggestions =
-    trimmed.length >= MIN_QUERY_LENGTH && results.query === trimmed
+    trimmed.length >= MIN_QUERY_LENGTH &&
+    value.trim() === trimmed &&
+    results.query === trimmed
       ? results.items
       : [];
   const showList = open && suggestions.length > 0;
