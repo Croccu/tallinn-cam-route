@@ -1,0 +1,27 @@
+.planner-page {
+  display: flex;
+  height: 100dvh;
+  flex-direction: column;
+}
+.planner-page__header {
+  display: flex;
+  height: 3.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-inline: 1rem;
+}
+.planner-page__brand {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.planner-page__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--accent);
+}
+.planner-page__title {
+  font-weight: 600;
+  letter-spacing: -.025em;
+}

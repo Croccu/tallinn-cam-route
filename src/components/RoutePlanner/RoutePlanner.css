@@ -1,0 +1,32 @@
+.route-planner {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.route-planner__sidebar {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-color: var(--border);
+  padding: 1rem;
+}
+.route-planner__map {
+  min-height: 20rem;
+  flex: 1;
+  flex-shrink: 0;
+  padding: 1rem;
+}
+@media (min-width: 48rem) {
+  .route-planner {
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .route-planner__sidebar {
+    width: 24rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+  }
+}

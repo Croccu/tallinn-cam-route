@@ -19,7 +19,6 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "4.3.3",
     "@types/mapbox__polyline": "^1.0.5",
     "@types/mapbox-gl": "^3.4.1",
     "@types/node": "^20",
@@ -27,7 +26,6 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
-    "tailwindcss": "4.3.3",
     "typescript": "^5"
   }
 }

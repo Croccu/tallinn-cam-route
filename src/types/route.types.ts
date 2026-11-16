@@ -16,8 +16,12 @@ export type DirectionsRoute = {
   legs: Array<{ steps: RouteStep[] }>;
 };
 
-export type RouteState = {
-  status: "idle" | "loading" | "success" | "error";
-  route: DirectionsRoute | null;
-  error?: string;
+export type RouteGeometry = LineString;
+export type DrivingRoute = Omit<DirectionsRoute, "geometry"> & {
+  geometry: RouteGeometry;
 };
+
+export type RouteState =
+  | { status: "idle" | "loading"; route: null }
+  | { status: "success"; route: DrivingRoute }
+  | { status: "error"; route: null; error: string };
