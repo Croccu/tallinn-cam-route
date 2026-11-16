@@ -1,6 +1,6 @@
 // The plugin does not ship types and has no published DefinitelyTyped package.
 declare module "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions" {
-  import type { DirectionsRoute } from "@/types/route";
+  import type { DirectionsRoute } from "@/types/route.types";
   import type { IControl, Map } from "mapbox-gl";
 
   interface DirectionsOptions {

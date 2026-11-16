@@ -1,0 +1,167 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  overflow: hidden;
+  background: #27272a;
+  padding-bottom: 6rem;
+  color: white;
+}
+.hero__image {
+  object-fit: cover;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #0009, #00000059, #0000008c);
+}
+.hero__header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+.hero__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.hero__brand-mark {
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff3;
+  backdrop-filter: blur(8px);
+}
+.hero__brand-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.hero__brand-name {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.hero__navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.hero__how-link {
+  display: none;
+}
+.hero__how-link:hover {
+  color: #e0f2fe;
+}
+.hero__header-action {
+  border-radius: 9999px;
+  background: white;
+  padding: 0.625rem 1.25rem;
+  color: #0369a1;
+  box-shadow: 0 1px 2px #0001;
+  transition: background 0.15s;
+}
+.hero__header-action:hover {
+  background: #f0f9ff;
+}
+.hero__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+.hero__eyebrow {
+  font-size: 1rem;
+  font-weight: 600;
+  filter: drop-shadow(0 1px 1px #0002);
+}
+.hero__heading {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  filter: drop-shadow(0 3px 3px #0002);
+}
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.hero__primary-action {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: #2563eb;
+  padding: 0.875rem 1.75rem;
+  font-weight: 600;
+  box-shadow: 0 10px 15px #1c398e33;
+  transition: background 0.15s;
+}
+.hero__primary-action:hover {
+  background: #1d4ed8;
+}
+.hero__arrow,
+.hero__icon {
+  width: 1rem;
+  height: 1rem;
+}
+.hero__arrow {
+  transition: transform 0.15s;
+}
+.hero__primary-action:hover .hero__arrow {
+  transform: translateX(0.125rem);
+}
+.hero__map-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 9999px;
+  padding: 0.875rem 1.25rem;
+  font-weight: 600;
+}
+.hero__map-link:hover {
+  background: #ffffff1a;
+}
+@media (min-width: 40rem) {
+  .hero__header {
+    padding-inline: 2.5rem;
+  }
+  .hero__how-link {
+    display: block;
+  }
+  .hero__eyebrow {
+    font-size: 1.25rem;
+  }
+  .hero__heading {
+    font-size: 4.5rem;
+  }
+  .hero__actions {
+    flex-direction: row;
+  }
+}
+@media (min-width: 64rem) {
+  .hero__heading {
+    font-size: 6rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__arrow {
+    transition: none;
+  }
+}

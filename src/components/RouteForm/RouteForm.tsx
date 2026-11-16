@@ -1,43 +1,45 @@
 "use client";
 
 import { ArrowUpDown, Flag, MapPin } from "lucide-react";
-import AddressInput, { type Suggestion } from "@/components/address-input";
+import { AddressInput } from "@/components/AddressInput/AddressInput";
+import type {
+  RoutePoint,
+  RoutePointKey,
+  Suggestion,
+} from "@/types/address.types";
+import "./RouteForm.css";
 
-export type RoutePoint = {
-  value: string;
-  suggestion: Suggestion | null;
-};
-
-type Props = {
+type RouteFormProps = {
   start: RoutePoint;
   end: RoutePoint;
-  onChange: (key: "start" | "end", value: string) => void;
-  onSelect: (key: "start" | "end", suggestion: Suggestion) => void;
+  onChange: (key: RoutePointKey, value: string) => void;
+  onSelect: (key: RoutePointKey, suggestion: Suggestion) => void;
   onSwap: () => void;
 };
 
-export default function RouteForm({
+export function RouteForm({
   start,
   end,
   onChange,
   onSelect,
   onSwap,
-}: Props) {
+}: RouteFormProps) {
   return (
-    <section aria-label="Your route" className="flex flex-col gap-3">
-      <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-        Your route
-      </h2>
+    <section
+      aria-label="Your route"
+      className="route-form"
+    >
+      <h2 className="route-form__heading">Your route</h2>
 
-      <div className="flex items-center gap-2">
-        <div className="flex flex-1 flex-col gap-2">
+      <div className="route-form__controls">
+        <div className="route-form__points">
           <AddressInput
             value={start.value}
             onChange={(value) => onChange("start", value)}
             onSelect={(suggestion) => onSelect("start", suggestion)}
             label="Start point"
             icon={MapPin}
-            iconClassName="text-green-600"
+            variant="start"
           />
           <AddressInput
             value={end.value}
@@ -45,7 +47,7 @@ export default function RouteForm({
             onSelect={(suggestion) => onSelect("end", suggestion)}
             label="Destination"
             icon={Flag}
-            iconClassName="text-red-600"
+            variant="end"
           />
         </div>
 
@@ -53,13 +55,16 @@ export default function RouteForm({
           type="button"
           onClick={onSwap}
           aria-label="Swap start and destination"
-          className="flex size-9 items-center justify-center rounded-full text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          className="route-form__swap"
         >
-          <ArrowUpDown className="size-4" aria-hidden />
+          <ArrowUpDown
+            className="route-form__swap-icon"
+            aria-hidden
+          />
         </button>
       </div>
 
-      <p className="text-xs text-zinc-500 dark:text-zinc-400">
+      <p className="route-form__hint">
         Select an address suggestion for each point to get driving directions.
       </p>
     </section>
