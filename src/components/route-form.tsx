@@ -1,27 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowUpDown, Flag, MapPin, Search } from "lucide-react";
-import AddressInput from "@/components/address-input";
+import { ArrowUpDown, Flag, MapPin } from "lucide-react";
+import AddressInput, { type Suggestion } from "@/components/address-input";
 
-export default function RouteForm() {
-  const [start, setStart] = useState("");
-  const [end, setEnd] = useState("");
+export type RoutePoint = {
+  value: string;
+  suggestion: Suggestion | null;
+};
 
-  const canSubmit = start.trim() !== "" && end.trim() !== "";
+type Props = {
+  start: RoutePoint;
+  end: RoutePoint;
+  onChange: (key: "start" | "end", value: string) => void;
+  onSelect: (key: "start" | "end", suggestion: Suggestion) => void;
+  onSwap: () => void;
+};
 
-  function swap() {
-    setStart(end);
-    setEnd(start);
-  }
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    // TODO: geocode start/end, build the route and find cameras along it.
-  }
-
+export default function RouteForm({
+  start,
+  end,
+  onChange,
+  onSelect,
+  onSwap,
+}: Props) {
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <section aria-label="Your route" className="flex flex-col gap-3">
       <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
         Your route
       </h2>
@@ -29,15 +32,17 @@ export default function RouteForm() {
       <div className="flex items-center gap-2">
         <div className="flex flex-1 flex-col gap-2">
           <AddressInput
-            value={start}
-            onChange={setStart}
+            value={start.value}
+            onChange={(value) => onChange("start", value)}
+            onSelect={(suggestion) => onSelect("start", suggestion)}
             label="Start point"
             icon={MapPin}
             iconClassName="text-green-600"
           />
           <AddressInput
-            value={end}
-            onChange={setEnd}
+            value={end.value}
+            onChange={(value) => onChange("end", value)}
+            onSelect={(suggestion) => onSelect("end", suggestion)}
             label="Destination"
             icon={Flag}
             iconClassName="text-red-600"
@@ -46,7 +51,7 @@ export default function RouteForm() {
 
         <button
           type="button"
-          onClick={swap}
+          onClick={onSwap}
           aria-label="Swap start and destination"
           className="flex size-9 items-center justify-center rounded-full text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800"
         >
@@ -54,14 +59,9 @@ export default function RouteForm() {
         </button>
       </div>
 
-      <button
-        type="submit"
-        disabled={!canSubmit}
-        className="flex h-10 items-center justify-center gap-2 rounded-lg bg-blue-600 text-sm font-medium text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        <Search className="size-4" aria-hidden />
-        Find cameras on route
-      </button>
-    </form>
+      <p className="text-xs text-zinc-500 dark:text-zinc-400">
+        Select an address suggestion for each point to get driving directions.
+      </p>
+    </section>
   );
 }
