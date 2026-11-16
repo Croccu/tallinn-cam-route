@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUpDown, Flag, MapPin, Search } from "lucide-react";
+import AddressInput from "@/components/address-input";
 
 export default function RouteForm() {
   const [start, setStart] = useState("");
@@ -27,32 +28,20 @@ export default function RouteForm() {
 
       <div className="flex items-center gap-2">
         <div className="flex flex-1 flex-col gap-2">
-          <label className="relative">
-            <span className="sr-only">Start point</span>
-            <MapPin
-              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-green-600"
-              aria-hidden
-            />
-            <input
-              value={start}
-              onChange={(e) => setStart(e.target.value)}
-              placeholder="Start point"
-              className="h-10 w-full rounded-lg border border-zinc-300 bg-transparent pr-3 pl-9 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-zinc-700"
-            />
-          </label>
-          <label className="relative">
-            <span className="sr-only">Destination</span>
-            <Flag
-              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-red-600"
-              aria-hidden
-            />
-            <input
-              value={end}
-              onChange={(e) => setEnd(e.target.value)}
-              placeholder="Destination"
-              className="h-10 w-full rounded-lg border border-zinc-300 bg-transparent pr-3 pl-9 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-zinc-700"
-            />
-          </label>
+          <AddressInput
+            value={start}
+            onChange={setStart}
+            label="Start point"
+            icon={MapPin}
+            iconClassName="text-green-600"
+          />
+          <AddressInput
+            value={end}
+            onChange={setEnd}
+            label="Destination"
+            icon={Flag}
+            iconClassName="text-red-600"
+          />
         </div>
 
         <button
