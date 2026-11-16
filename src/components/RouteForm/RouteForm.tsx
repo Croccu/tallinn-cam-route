@@ -1,9 +1,21 @@
 "use client";
 
 import { ArrowUpDown, Flag, MapPin } from "lucide-react";
-import { AddressInput } from "@/components/AddressInput";
-import type { RouteFormProps } from "./RouteForm.types";
+import { AddressInput } from "@/components/AddressInput/AddressInput";
+import type {
+  RoutePoint,
+  RoutePointKey,
+  Suggestion,
+} from "@/types/address.types";
 import "./RouteForm.css";
+
+type RouteFormProps = {
+  start: RoutePoint;
+  end: RoutePoint;
+  onChange: (key: RoutePointKey, value: string) => void;
+  onSelect: (key: RoutePointKey, suggestion: Suggestion) => void;
+  onSwap: () => void;
+};
 
 export function RouteForm({
   start,
@@ -13,10 +25,11 @@ export function RouteForm({
   onSwap,
 }: RouteFormProps) {
   return (
-    <section aria-label="Your route" className="route-form">
-      <h2 className="route-form__heading">
-        Your route
-      </h2>
+    <section
+      aria-label="Your route"
+      className="route-form"
+    >
+      <h2 className="route-form__heading">Your route</h2>
 
       <div className="route-form__controls">
         <div className="route-form__points">
@@ -44,7 +57,10 @@ export function RouteForm({
           aria-label="Swap start and destination"
           className="route-form__swap"
         >
-          <ArrowUpDown className="route-form__swap-icon" aria-hidden />
+          <ArrowUpDown
+            className="route-form__swap-icon"
+            aria-hidden
+          />
         </button>
       </div>
 

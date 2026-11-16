@@ -45,12 +45,15 @@ Restart the development server after changing `.env.local`. Configuration is val
 There is currently no automated test suite or `npm test` script. Run the available static and build checks:
 
 ```bash
+npm run format:check
 npm run lint
 npm run build
 npx --no-install tsc --noEmit
 ```
 
 Run the build before the standalone type check on a fresh checkout so Next.js can generate its route types. The build also checks TypeScript. The app uses Google-hosted Geist fonts through `next/font`, so the build may need network access to download them.
+
+Run `npm run format` to format source files with Prettier. Formatting uses two-space indentation, an 80-character target line width, and one JSX attribute per line for elements with multiple attributes. Separate logical sections with blank lines and keep control flow explicit rather than compressing it into one-liners or nested ternaries.
 
 For a manual smoke check:
 - Open `/` and follow the planner links to `/plan`.
@@ -74,7 +77,7 @@ Public environment variables are embedded at build time; changing the token for 
 ## Project structure
 
 - `src/app/`: Thin route entry points, root layout, and global resets/theme/third-party CSS.
-- `src/components/<ComponentName>/`: PascalCase UI folders containing `<ComponentName>.tsx`, `<ComponentName>.css`, `<ComponentName>.types.ts`, and a named `index.ts` export. Styles use component-scoped BEM names.
+- `src/components/<ComponentName>/`: PascalCase UI folders containing `<ComponentName>.tsx` and `<ComponentName>.css`. Simple component-specific types stay beside the implementation; separate `.types.ts` files are reserved for substantial or reused types. Import named components directly from their implementation files, such as `@/components/MapView/MapView`; do not add per-component `index.ts` barrels. Styles use component-scoped BEM names.
 - `src/components/Hero/` and `src/components/MapSection/`: Server-rendered landing-page sections.
 - `src/components/PlannerPage/` and `src/components/RoutePlanner/`: Planner shell and interactive endpoint/route state.
 - `src/components/AddressInput/`, `src/components/RouteForm/`, `src/components/DirectionsList/`, and `src/components/MapView/`: Planner presentation.

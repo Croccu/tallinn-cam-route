@@ -2,13 +2,27 @@
 
 import { useId, useState } from "react";
 import type { KeyboardEvent } from "react";
+import type { LucideIcon } from "lucide-react";
 import { useAddressSuggestions } from "@/hooks/useAddressSuggestions";
 import type { Suggestion } from "@/types/address.types";
-import type { AddressInputProps } from "./AddressInput.types";
 import "./AddressInput.css";
 
+type AddressInputProps = {
+  value: string;
+  onChange: (value: string) => void;
+  onSelect?: (suggestion: Suggestion) => void;
+  label: string;
+  icon: LucideIcon;
+  variant: "start" | "end";
+};
+
 export function AddressInput({
-  value, onChange, onSelect, label, icon: Icon, variant,
+  value,
+  onChange,
+  onSelect,
+  label,
+  icon: Icon,
+  variant,
 }: AddressInputProps) {
   const inputId = useId();
   const listId = useId();
@@ -42,7 +56,9 @@ export function AddressInput({
         break;
       case "ArrowUp":
         event.preventDefault();
-        setActiveIndex((index) => index <= 0 ? suggestions.length - 1 : index - 1);
+        setActiveIndex((index) =>
+          index <= 0 ? suggestions.length - 1 : index - 1,
+        );
         break;
       case "Enter":
         if (activeSuggestion) {
@@ -59,8 +75,16 @@ export function AddressInput({
 
   return (
     <div className={`address-input address-input--${variant}`}>
-      <label htmlFor={inputId} className="address-input__label">{label}</label>
-      <Icon className="address-input__icon" aria-hidden />
+      <label
+        htmlFor={inputId}
+        className="address-input__label"
+      >
+        {label}
+      </label>
+      <Icon
+        className="address-input__icon"
+        aria-hidden
+      />
       <input
         id={inputId}
         value={value}
@@ -80,12 +104,19 @@ export function AddressInput({
         aria-expanded={shouldShowList}
         aria-controls={shouldShowList ? listId : undefined}
         aria-activedescendant={
-          shouldShowList && activeSuggestion ? `${listId}-${activeIndex}` : undefined
+          shouldShowList && activeSuggestion
+            ? `${listId}-${activeIndex}`
+            : undefined
         }
         className="address-input__field"
       />
       {shouldShowList && (
-        <ul id={listId} role="listbox" aria-label={`${label} suggestions`} className="address-input__suggestions">
+        <ul
+          id={listId}
+          role="listbox"
+          aria-label={`${label} suggestions`}
+          className="address-input__suggestions"
+        >
           {suggestions.map((suggestion, index) => (
             <li
               key={suggestion.id}
@@ -98,7 +129,11 @@ export function AddressInput({
               className="address-input__suggestion"
             >
               <span className="address-input__name">{suggestion.name}</span>
-              {suggestion.context && <span className="address-input__context">{suggestion.context}</span>}
+              {suggestion.context && (
+                <span className="address-input__context">
+                  {suggestion.context}
+                </span>
+              )}
             </li>
           ))}
         </ul>

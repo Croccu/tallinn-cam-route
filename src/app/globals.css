@@ -31,16 +31,25 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, h1, h2, h3, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+p,
+ol,
+ul {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-size: inherit;
   font-weight: inherit;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
   padding: 0;
 }
@@ -50,7 +59,8 @@ a {
   text-decoration: none;
 }
 
-button, input {
+button,
+input {
   font: inherit;
   color: inherit;
 }
@@ -62,12 +72,14 @@ button {
   cursor: pointer;
 }
 
-button:focus-visible, a:focus-visible {
+button:focus-visible,
+a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   vertical-align: middle;
 }

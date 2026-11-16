@@ -13,5 +13,8 @@ export type RoutePoint = {
   suggestion: Suggestion | null;
 };
 
-export type RoutePoints = { start: RoutePoint; end: RoutePoint };
+export type RoutePoints = {
+  start: RoutePoint;
+  end: RoutePoint;
+};
 export type RoutePointKey = keyof RoutePoints;

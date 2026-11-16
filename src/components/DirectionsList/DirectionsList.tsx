@@ -11,27 +11,32 @@ import {
   Undo2,
 } from "lucide-react";
 import { formatDistance, formatDuration } from "@/lib/routeUtils";
-import type { DirectionsListProps, ManeuverIconProps } from "./DirectionsList.types";
+import type { RouteState, RouteStep } from "@/types/route.types";
 import "./DirectionsList.css";
+
+type DirectionsListProps = { state: RouteState };
+type ManeuverIconProps = { step: RouteStep };
 
 function ManeuverIcon({ step }: ManeuverIconProps) {
   const { type, modifier } = step.maneuver;
-  const Icon =
-    type === "arrive"
-      ? Flag
-      : type === "roundabout" || type === "rotary"
-        ? RotateCcw
-        : modifier === "uturn"
-          ? Undo2
-          : modifier === "sharp left"
-            ? ArrowLeft
-            : modifier === "sharp right"
-              ? ArrowRight
-              : modifier?.includes("left")
-                ? CornerUpLeft
-                : modifier?.includes("right")
-                  ? CornerUpRight
-                  : ArrowUp;
+  let Icon = ArrowUp;
+
+  if (type === "arrive") {
+    Icon = Flag;
+  } else if (type === "roundabout" || type === "rotary") {
+    Icon = RotateCcw;
+  } else if (modifier === "uturn") {
+    Icon = Undo2;
+  } else if (modifier === "sharp left") {
+    Icon = ArrowLeft;
+  } else if (modifier === "sharp right") {
+    Icon = ArrowRight;
+  } else if (modifier?.includes("left")) {
+    Icon = CornerUpLeft;
+  } else if (modifier?.includes("right")) {
+    Icon = CornerUpRight;
+  }
+
   return (
     <Icon
       className="directions-list__maneuver-icon"
@@ -42,22 +47,33 @@ function ManeuverIcon({ step }: ManeuverIconProps) {
 
 export function DirectionsList({ state }: DirectionsListProps) {
   return (
-    <section aria-label="Directions" className="directions-list">
-      <h2 className="directions-list__heading">
-        Directions
-      </h2>
-      <div role="status" aria-live="polite">
+    <section
+      aria-label="Directions"
+      className="directions-list"
+    >
+      <h2 className="directions-list__heading">Directions</h2>
+      <div
+        role="status"
+        aria-live="polite"
+      >
         {state.status === "idle" && (
           <div className="directions-list__empty">
-            <Route className="directions-list__empty-icon" aria-hidden />
+            <Route
+              className="directions-list__empty-icon"
+              aria-hidden
+            />
             <p className="directions-list__description">
-              Choose a start point and destination to see turn-by-turn directions.
+              Choose a start point and destination to see turn-by-turn
+              directions.
             </p>
           </div>
         )}
         {state.status === "loading" && (
           <p className="directions-list__loading">
-            <LoaderCircle className="directions-list__spinner" aria-hidden />
+            <LoaderCircle
+              className="directions-list__spinner"
+              aria-hidden
+            />
             Finding your route…
           </p>
         )}
@@ -82,19 +98,26 @@ export function DirectionsList({ state }: DirectionsListProps) {
       )}
       {state.status === "success" && state.route && (
         <ol className="directions-list__steps">
-          {state.route.legs.flatMap((leg) => leg.steps).map((step, index) => (
-            <li key={index} className="directions-list__step">
-              <span className="directions-list__maneuver">
-                <ManeuverIcon step={step} />
-              </span>
-              <div className="directions-list__instruction">
-                <p className="directions-list__description">{step.maneuver.instruction}</p>
-                <p className="directions-list__distance">
-                  {formatDistance(step.distance)}
-                </p>
-              </div>
-            </li>
-          ))}
+          {state.route.legs
+            .flatMap((leg) => leg.steps)
+            .map((step, index) => (
+              <li
+                key={index}
+                className="directions-list__step"
+              >
+                <span className="directions-list__maneuver">
+                  <ManeuverIcon step={step} />
+                </span>
+                <div className="directions-list__instruction">
+                  <p className="directions-list__description">
+                    {step.maneuver.instruction}
+                  </p>
+                  <p className="directions-list__distance">
+                    {formatDistance(step.distance)}
+                  </p>
+                </div>
+              </li>
+            ))}
         </ol>
       )}
     </section>

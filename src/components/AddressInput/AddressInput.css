@@ -16,7 +16,7 @@
   pointer-events: none;
   position: absolute;
   top: 1.25rem;
-  left: .75rem;
+  left: 0.75rem;
   width: 1rem;
   height: 1rem;
   transform: translateY(-50%);
@@ -30,11 +30,11 @@
 .address-input__field {
   height: 2.5rem;
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--border-strong);
   background: transparent;
-  padding: 0 .75rem 0 2.25rem;
-  font-size: .875rem;
+  padding: 0 0.75rem 0 2.25rem;
+  font-size: 0.875rem;
   outline: none;
 }
 .address-input__field:focus {
@@ -46,25 +46,26 @@
   inset-inline: 0;
   top: 100%;
   z-index: 20;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   overflow: hidden;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--border);
   background: var(--surface);
-  padding-block: .25rem;
+  padding-block: 0.25rem;
   box-shadow: 0 10px 15px -3px #0002;
 }
 .address-input__suggestion {
   display: flex;
   cursor: pointer;
   flex-direction: column;
-  padding: .5rem .75rem;
-  font-size: .875rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
 }
 .address-input__suggestion[aria-selected="true"] {
   background: var(--hover);
 }
-.address-input__name, .address-input__context {
+.address-input__name,
+.address-input__context {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -73,6 +74,6 @@
   font-weight: 500;
 }
 .address-input__context {
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }

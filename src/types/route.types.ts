@@ -22,6 +22,16 @@ export type DrivingRoute = Omit<DirectionsRoute, "geometry"> & {
 };
 
 export type RouteState =
-  | { status: "idle" | "loading"; route: null }
-  | { status: "success"; route: DrivingRoute }
-  | { status: "error"; route: null; error: string };
+  | {
+      status: "idle" | "loading";
+      route: null;
+    }
+  | {
+      status: "success";
+      route: DrivingRoute;
+    }
+  | {
+      status: "error";
+      route: null;
+      error: string;
+    };

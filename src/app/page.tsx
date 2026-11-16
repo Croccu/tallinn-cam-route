@@ -1,5 +1,5 @@
-import { Hero } from "@/components/Hero";
-import { MapSection } from "@/components/MapSection";
+import { Hero } from "@/components/Hero/Hero";
+import { MapSection } from "@/components/MapSection/MapSection";
 import { ENV } from "@/lib/env";
 import { getStaticMapUrl } from "@/lib/mapConfig";
 

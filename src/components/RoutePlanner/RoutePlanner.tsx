@@ -1,30 +1,54 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { RouteForm } from "@/components/RouteForm";
-import { DirectionsList } from "@/components/DirectionsList";
-import { MapView } from "@/components/MapView";
-import type { RoutePoint, RoutePointKey, RoutePoints, Suggestion } from "@/types/address.types";
+import { RouteForm } from "@/components/RouteForm/RouteForm";
+import { DirectionsList } from "@/components/DirectionsList/DirectionsList";
+import { MapView } from "@/components/MapView/MapView";
+import type {
+  RoutePoint,
+  RoutePointKey,
+  RoutePoints,
+  Suggestion,
+} from "@/types/address.types";
 import type { RouteState } from "@/types/route.types";
-import type { RoutePlannerState } from "./RoutePlanner.types";
 import "./RoutePlanner.css";
 
-const EMPTY_POINT: RoutePoint = { value: "", suggestion: null };
+type RoutePlannerState = {
+  points: RoutePoints;
+  route: RouteState;
+};
+
+const EMPTY_POINT: RoutePoint = {
+  value: "",
+  suggestion: null,
+};
 
 export function RoutePlanner() {
-  const [{ points, route: routeState }, setState] = useState<RoutePlannerState>({
-    points: { start: EMPTY_POINT, end: EMPTY_POINT },
-    route: { status: "idle", route: null },
-  });
+  const [{ points, route: routeState }, setState] = useState<RoutePlannerState>(
+    {
+      points: {
+        start: EMPTY_POINT,
+        end: EMPTY_POINT,
+      },
+      route: {
+        status: "idle",
+        route: null,
+      },
+    },
+  );
   const updateRoute = useCallback((route: RouteState) => {
-    setState((current) => ({ ...current, route }));
+    setState((current) => ({
+      ...current,
+      route,
+    }));
   }, []);
 
   function updatePoints(next: RoutePoints) {
     setState({
       points: next,
       route: {
-        status: next.start.suggestion && next.end.suggestion ? "loading" : "idle",
+        status:
+          next.start.suggestion && next.end.suggestion ? "loading" : "idle",
         route: null,
       },
     });
@@ -33,7 +57,10 @@ export function RoutePlanner() {
   function selectPoint(key: RoutePointKey, suggestion: Suggestion) {
     updatePoints({
       ...points,
-      [key]: { value: suggestion.fullAddress, suggestion },
+      [key]: {
+        value: suggestion.fullAddress,
+        suggestion,
+      },
     });
   }
 
@@ -44,10 +71,21 @@ export function RoutePlanner() {
           start={points.start}
           end={points.end}
           onChange={(key, value) =>
-            updatePoints({ ...points, [key]: { value, suggestion: null } })
+            updatePoints({
+              ...points,
+              [key]: {
+                value,
+                suggestion: null,
+              },
+            })
           }
           onSelect={selectPoint}
-          onSwap={() => updatePoints({ start: points.end, end: points.start })}
+          onSwap={() =>
+            updatePoints({
+              start: points.end,
+              end: points.start,
+            })
+          }
         />
         <DirectionsList state={routeState} />
       </aside>
