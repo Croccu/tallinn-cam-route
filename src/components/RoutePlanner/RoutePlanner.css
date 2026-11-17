@@ -14,6 +14,7 @@
   padding: 1rem;
 }
 .route-planner__map {
+  position: relative;
   min-height: 20rem;
   flex: 1;
   flex-shrink: 0;

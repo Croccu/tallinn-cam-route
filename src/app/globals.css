@@ -115,3 +115,11 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
 }
+
+/* Mapbox GL overrides */
+
+/* Mapbox shows a grab cursor; show a pointer over clickable camera icons. */
+.map-view__container--camera-hover
+  .mapboxgl-canvas-container.mapboxgl-interactive {
+  cursor: pointer;
+}

@@ -16,6 +16,7 @@ export function useMapbox(
 ) {
   const containerRef = useRef<HTMLDivElement>(null);
   const directionsRef = useRef<MapboxDirections | null>(null);
+  const [map, setMap] = useState<mapboxgl.Map | null>(null);
   const [isDirectionsReady, setIsDirectionsReady] = useState(false);
   const [mapError, setMapError] = useState<string | null>(null);
 
@@ -182,6 +183,11 @@ export function useMapbox(
           });
         }
       }
+
+      // Expose the map last so overlays draw above the directions layers.
+      if (!isDisposed) {
+        setMap(map);
+      }
     };
 
     map.addControl(navigation, "top-right");
@@ -198,6 +204,7 @@ export function useMapbox(
     return () => {
       isDisposed = true;
       directionsRef.current = null;
+      setMap(null);
 
       map.off("load", handleLoad);
       map.off("error", handleMapError);
@@ -217,6 +224,7 @@ export function useMapbox(
 
   return {
     containerRef,
+    map,
     mapError,
     hasMapboxToken: Boolean(ENV.mapboxToken),
   };
