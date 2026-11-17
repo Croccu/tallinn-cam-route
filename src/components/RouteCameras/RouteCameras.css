@@ -1,0 +1,79 @@
+.route-cameras {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.route-cameras__heading {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.route-cameras__empty {
+  border: 1px dashed var(--border-strong);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.route-cameras__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.route-cameras__item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background: transparent;
+  padding: 0.5rem 0.625rem;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.route-cameras__item:hover {
+  background: var(--hover);
+}
+
+.route-cameras__item--selected {
+  border-color: var(--accent);
+  background: var(--info-background);
+}
+
+.route-cameras__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.route-cameras__text {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+}
+
+.route-cameras__name {
+  font-size: 0.875rem;
+}
+
+.route-cameras__count {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.route-cameras__chevron {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: var(--muted);
+}
