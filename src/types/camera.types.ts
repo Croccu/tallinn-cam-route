@@ -13,6 +13,11 @@ export type CameraLocation = {
   cameras: TrafficCamera[];
 };
 
+// Returned by /api/cameras/[cameraId]/status.
+export type CameraStatus = {
+  isOnline: boolean;
+};
+
 export type CameraSelection = {
   locationId: string;
   // Unique per opening so the first frame never comes from the HTTP cache.

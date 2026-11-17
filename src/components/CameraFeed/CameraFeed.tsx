@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { Video, X } from "lucide-react";
+import { Video, VideoOff, X } from "lucide-react";
+import { useCameraStatus } from "@/hooks/useCameraStatus";
 import {
   CAMERA_REFRESH_INTERVAL_MS,
   getCameraImageUrl,
@@ -20,6 +21,8 @@ type LiveCameraImageProps = {
   camera: TrafficCamera;
   openedAt: number;
 };
+
+type CameraViewProps = LiveCameraImageProps;
 
 const CAMERA_IMAGE_WIDTH = 1280;
 const CAMERA_IMAGE_HEIGHT = 720;
@@ -64,6 +67,41 @@ function LiveCameraImage({ camera, openedAt }: LiveCameraImageProps) {
   );
 }
 
+function CameraView({ camera, openedAt }: CameraViewProps) {
+  const connection = useCameraStatus(camera.id);
+
+  if (connection === "checking") {
+    return (
+      <div
+        className="camera-feed__placeholder"
+        aria-busy
+      />
+    );
+  }
+
+  // Replaces the camera server's own offline placeholder image.
+  if (connection === "offline") {
+    return (
+      <div className="camera-feed__placeholder camera-feed__placeholder--offline">
+        <VideoOff
+          className="camera-feed__offline-icon"
+          aria-hidden
+        />
+        <p className="camera-feed__offline-message">
+          Ühendus kaameraga puudub.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <LiveCameraImage
+      camera={camera}
+      openedAt={openedAt}
+    />
+  );
+}
+
 export function CameraFeed({ location, openedAt, onClose }: CameraFeedProps) {
   return (
     <section
@@ -92,7 +130,7 @@ export function CameraFeed({ location, openedAt, onClose }: CameraFeedProps) {
         {location.cameras.map((camera) => (
           <li key={camera.id}>
             <figure className="camera-feed__figure">
-              <LiveCameraImage
+              <CameraView
                 camera={camera}
                 openedAt={openedAt}
               />

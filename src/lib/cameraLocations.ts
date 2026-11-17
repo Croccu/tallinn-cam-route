@@ -181,4 +181,248 @@ export const CAMERA_LOCATIONS: CameraLocation[] = [
       },
     ],
   },
+  // Paldiski mnt corridor: Toompuiestee out to Tähetorni and Tabasalu.
+  {
+    id: "toompuiestee-nunne",
+    name: "Toompuiestee – Nunne tn",
+    coordinates: [24.739, 59.44009],
+    cameras: [
+      {
+        id: "cam212",
+        name: "Toompuiestee – Nunne tn (suund Balti jaam)",
+      },
+      {
+        id: "cam211",
+        name: "Toompuiestee – Nunne tn (suund sadam)",
+      },
+    ],
+  },
+  {
+    id: "toompuiestee-tehnika",
+    name: "Toompuiestee – Tehnika tn",
+    coordinates: [24.7328, 59.4365],
+    cameras: [
+      {
+        id: "cam061",
+        name: "Toompuiestee – Tehnika tn",
+      },
+      {
+        id: "cam062",
+        name: "Toompuiestee – Tehnika tn (suund Balti jaam)",
+      },
+    ],
+  },
+  {
+    id: "toompuiestee-paldiski",
+    name: "Toompuiestee – Paldiski mnt",
+    coordinates: [24.73287, 59.43489],
+    cameras: [
+      {
+        id: "cam210",
+        name: "Toompuiestee – Paldiski mnt",
+      },
+    ],
+  },
+  {
+    id: "paldiski-tehnika",
+    name: "Paldiski mnt – Tehnika tn",
+    coordinates: [24.72416, 59.43445],
+    cameras: [
+      {
+        id: "cam213",
+        name: "Paldiski mnt – Tehnika tn (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-ristiku",
+    name: "Paldiski mnt – Ristiku tn",
+    coordinates: [24.72236, 59.43401],
+    cameras: [
+      {
+        id: "cam215",
+        name: "Paldiski mnt – Ristiku tn (suund Ristiku)",
+      },
+      {
+        id: "cam214",
+        name: "Paldiski mnt – Ristiku tn (suund Mustamäe)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-tulika-sole",
+    name: "Paldiski mnt – Tulika tn / Sõle tn",
+    coordinates: [24.71622, 59.43268],
+    cameras: [
+      {
+        id: "cam063",
+        name: "Paldiski mnt – Tulika tn",
+      },
+      {
+        id: "cam064",
+        name: "Paldiski mnt – Sõle tn",
+      },
+    ],
+  },
+  {
+    id: "paldiski-endla",
+    name: "Paldiski mnt – Endla tn",
+    coordinates: [24.70504, 59.42922],
+    cameras: [
+      {
+        id: "cam035",
+        name: "Paldiski mnt – Endla tn (suund Mustamäe, Õismäe)",
+      },
+      {
+        id: "cam036",
+        name: "Paldiski mnt – Endla tn (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-moisa",
+    name: "Paldiski mnt – Mõisa tn",
+    coordinates: [24.65652, 59.42598],
+    cameras: [
+      {
+        id: "cam119",
+        name: "Paldiski mnt – Mõisa tn (suund kesklinn)",
+      },
+      {
+        id: "cam120",
+        name: "Paldiski mnt – Mõisa tn (suund Õismäe)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-rannamoisa",
+    name: "Paldiski mnt – Rannamõisa tee",
+    coordinates: [24.6462, 59.42316],
+    cameras: [
+      {
+        id: "cam218",
+        name: "Paldiski mnt – Rannamõisa tee (suund Ehitajate tee)",
+      },
+      {
+        id: "cam219",
+        name: "Paldiski mnt – Rannamõisa tee (suund kesklinn)",
+      },
+      {
+        id: "cam220",
+        name: "Paldiski mnt – Rannamõisa tee (suund Keila)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-k-rauta",
+    name: "Paldiski mnt – K-Rauta ristmik",
+    coordinates: [24.64186, 59.42111],
+    cameras: [
+      {
+        id: "cam221",
+        name: "Paldiski mnt – K-Rauta ristmik (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "rannamoisa-louka",
+    name: "Rannamõisa tee – Lõuka tn",
+    coordinates: [24.6314, 59.42674],
+    cameras: [
+      {
+        id: "cam222",
+        name: "Rannamõisa tee – Lõuka tn (suund kesklinn)",
+      },
+      {
+        id: "cam223",
+        name: "Rannamõisa tee – Lõuka tn (suund Tabasalu)",
+      },
+    ],
+  },
+  {
+    id: "rannamoisa-pikaliiva",
+    name: "Rannamõisa tee – Pikaliiva tn",
+    coordinates: [24.61937, 59.42902],
+    cameras: [
+      {
+        id: "cam226",
+        name: "Rannamõisa tee – Pikaliiva tn (suund Tabasalu)",
+      },
+      {
+        id: "cam227",
+        name: "Rannamõisa tee – Pikaliiva tn (suund Õismägi)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-oismae",
+    name: "Paldiski mnt – Õismäe tee",
+    coordinates: [24.63396, 59.41356],
+    cameras: [
+      {
+        id: "cam028",
+        name: "Paldiski mnt – Õismäe tee (Harku järve JKÜ)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-jarveotsa",
+    name: "Paldiski mnt – Järveotsa tee",
+    coordinates: [24.63146, 59.40993],
+    cameras: [
+      {
+        id: "cam010",
+        name: "Paldiski mnt – Järveotsa tee (suund Keila)",
+      },
+      {
+        id: "cam011",
+        name: "Paldiski mnt – Järveotsa tee (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-jarvekalda",
+    name: "Paldiski mnt – Järvekalda tee",
+    coordinates: [24.61906, 59.40711],
+    cameras: [
+      {
+        id: "cam012",
+        name: "Paldiski mnt – Järvekalda tee (suund Keila)",
+      },
+      {
+        id: "cam013",
+        name: "Paldiski mnt – Järvekalda tee (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "paldiski-tahetorni",
+    name: "Paldiski mnt – Tähetorni tee",
+    coordinates: [24.59424, 59.39543],
+    cameras: [
+      {
+        id: "cam162",
+        name: "Paldiski mnt – Tähetorni tee (suund kesklinn)",
+      },
+      {
+        id: "cam163",
+        name: "Paldiski mnt – Tähetorni tee (suund Keila)",
+      },
+    ],
+  },
+  {
+    id: "akadeemia-jarveotsa",
+    name: "Akadeemia tee – Järveotsa tee",
+    coordinates: [24.64811, 59.40789],
+    cameras: [
+      {
+        id: "cam202",
+        name: "Akadeemia tee – Järveotsa tee (suund Järveotsa tee)",
+      },
+      {
+        id: "cam203",
+        name: "Akadeemia tee – Järveotsa tee (suund Pöörise tn)",
+      },
+    ],
+  },
 ];
