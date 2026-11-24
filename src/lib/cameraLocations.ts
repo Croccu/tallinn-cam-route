@@ -425,4 +425,426 @@ export const CAMERA_LOCATIONS: CameraLocation[] = [
       },
     ],
   },
+  // Port area: Mere pst, Põhja pst and the streets around the harbour.
+  {
+    id: "ahtri-hobujaama",
+    name: "Ahtri tn – Hobujaama tn",
+    coordinates: [24.75908, 59.43953],
+    cameras: [
+      {
+        id: "cam252",
+        name: "Ahtri tn – Hobujaama tn (suund Mere pst)",
+      },
+    ],
+  },
+  {
+    id: "ahtri-laeva",
+    name: "Ahtri tn – Laeva tn",
+    coordinates: [24.75571, 59.44077],
+    cameras: [
+      {
+        id: "cam253",
+        name: "Ahtri tn – Laeva tn (suund Mere pst)",
+      },
+    ],
+  },
+  {
+    id: "mere-ahtri",
+    name: "Mere pst – Ahtri tn",
+    coordinates: [24.7536, 59.44113],
+    cameras: [
+      {
+        id: "cam110",
+        name: "Mere pst – Ahtri tn (suund Ahtri)",
+      },
+      {
+        id: "cam111",
+        name: "Mere pst (suund Kopli) – Ahtri tn",
+      },
+    ],
+  },
+  {
+    id: "mere-sadama",
+    name: "Mere pst – Sadama tn",
+    coordinates: [24.75299, 59.44341],
+    cameras: [
+      {
+        id: "cam143",
+        name: "Mere pst – Sadama tn",
+      },
+      {
+        id: "cam259",
+        name: "Mere pst – Sadama tn (suund Kopli)",
+      },
+      {
+        id: "cam260",
+        name: "Mere pst – Sadama tn (suund Ahtri tn)",
+      },
+    ],
+  },
+  {
+    id: "pohja-kursi",
+    name: "Põhja pst – Kursi tn",
+    coordinates: [24.75176, 59.44373],
+    cameras: [
+      {
+        id: "cam258",
+        name: "Põhja pst – Kursi tn (suund Kopli)",
+      },
+    ],
+  },
+  {
+    id: "pohja-kalasadama",
+    name: "Põhja pst – Kalasadama tn",
+    coordinates: [24.74782, 59.44417],
+    cameras: [
+      {
+        id: "cam142",
+        name: "Põhja pst – Kalasadama tn",
+      },
+    ],
+  },
+  {
+    id: "niine-pohja",
+    name: "Niine tn – Põhja pst",
+    coordinates: [24.74312, 59.44348],
+    cameras: [
+      {
+        id: "cam232",
+        name: "Niine tn – Põhja pst",
+      },
+    ],
+  },
+  {
+    id: "kai-logi",
+    name: "Kai tn – Logi tn",
+    coordinates: [24.75889, 59.44377],
+    cameras: [
+      {
+        id: "cam254",
+        name: "Kai tn – Logi tn (suund Mere pst)",
+      },
+      {
+        id: "cam255",
+        name: "Kai tn – Logi tn (suund Sadama tn)",
+      },
+    ],
+  },
+  {
+    id: "sadama-logi",
+    name: "Sadama tn – Logi tn",
+    coordinates: [24.7586, 59.44431],
+    cameras: [
+      {
+        id: "cam256",
+        name: "Sadama tn – Logi tn",
+      },
+    ],
+  },
+  {
+    id: "logi-rumbi",
+    name: "Logi tn – Rumbi tn ringristmik",
+    coordinates: [24.75787, 59.44518],
+    cameras: [
+      {
+        id: "cam257",
+        name: "Logi tn – Rumbi tn ringristmik",
+      },
+    ],
+  },
+  // Reidi tee: Ahtri tn along the waterfront to Narva mnt.
+  {
+    id: "reidi-joe-ahtri",
+    name: "Reidi tee – Jõe tn – Ahtri tn",
+    coordinates: [24.76357, 59.44004],
+    cameras: [
+      {
+        id: "cam177",
+        name: "Reidi tee – Ahtri tn",
+      },
+      {
+        id: "cam178",
+        name: "Reidi tee – Jõe tn – Ahtri tn",
+      },
+    ],
+  },
+  {
+    id: "reidi-lootsi",
+    name: "Reidi tee – Lootsi tn",
+    coordinates: [24.76552, 59.44045],
+    cameras: [
+      {
+        id: "cam176",
+        name: "Reidi tee – Lootsi tn (suund sadam)",
+      },
+    ],
+  },
+  {
+    id: "reidi-uus-sadama",
+    name: "Reidi tee – Uus-Sadama tn",
+    coordinates: [24.77085, 59.44146],
+    cameras: [
+      {
+        id: "cam179",
+        name: "Reidi tee – Uus-Sadama tn (suund sadam)",
+      },
+    ],
+  },
+  {
+    id: "reidi-petrooleumi",
+    name: "Reidi tee – Petrooleumi tn",
+    coordinates: [24.77502, 59.44232],
+    cameras: [
+      {
+        id: "cam180",
+        name: "Reidi tee – Petrooleumi tn (suund sadam)",
+      },
+      {
+        id: "cam181",
+        name: "Reidi tee – Petrooleumi tn (suund Pirita)",
+      },
+    ],
+  },
+  {
+    id: "reidi-pikksilma",
+    name: "Reidi tee – Pikksilma tn",
+    coordinates: [24.78134, 59.44343],
+    cameras: [
+      {
+        id: "cam182",
+        name: "Reidi tee – Pikksilma tn (suund Pirita)",
+      },
+      {
+        id: "cam183",
+        name: "Reidi tee – Pikksilma tn (suund sadam)",
+      },
+    ],
+  },
+  {
+    id: "reidi-narva",
+    name: "Reidi tee – Narva mnt",
+    coordinates: [24.79018, 59.44249],
+    cameras: [
+      {
+        id: "cam184",
+        name: "Reidi tee – Narva mnt (suund sadam)",
+      },
+    ],
+  },
+  // Pirita tee towards Pirita and Merivälja.
+  {
+    id: "narva-pirita",
+    name: "Narva mnt – Pirita tee",
+    coordinates: [24.795, 59.44313],
+    cameras: [
+      {
+        id: "cam186",
+        name: "Narva mnt – Pirita tee (suund Pirita)",
+      },
+      {
+        id: "cam185",
+        name: "Narva mnt – Pirita tee (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "pirita-rummu",
+    name: "Pirita tee – Rummu tee",
+    coordinates: [24.82693, 59.46307],
+    cameras: [
+      {
+        id: "cam193",
+        name: "Pirita tee – Rummu tee (suund kesklinn)",
+      },
+      {
+        id: "cam194",
+        name: "Pirita tee – Rummu tee (suund Rummu tee)",
+      },
+    ],
+  },
+  {
+    id: "merivalja-kloostrimetsa",
+    name: "Merivälja tee – Kloostrimetsa tee",
+    coordinates: [24.8344, 59.46825],
+    cameras: [
+      {
+        id: "cam197",
+        name: "Merivälja tee – Kloostrimetsa tee",
+      },
+    ],
+  },
+  // Gonsiori tn corridor out to Laagna tee.
+  {
+    id: "gonsiori-maneezi-kivisilla",
+    name: "Gonsiori tn – Maneeži tn / Kivisilla tn",
+    coordinates: [24.76038, 59.4353],
+    cameras: [
+      {
+        id: "cam245",
+        name: "Gonsiori tn (suund Lasnamäe) – Maneeži tn",
+      },
+      {
+        id: "cam246",
+        name: "Gonsiori tn – Kivisilla tn",
+      },
+    ],
+  },
+  {
+    id: "gonsiori-pronksi",
+    name: "Gonsiori tn – Pronksi tn",
+    coordinates: [24.76436, 59.43475],
+    cameras: [
+      {
+        id: "cam083",
+        name: "Gonsiori tn – Pronksi tn (suund Kaubamaja)",
+      },
+      {
+        id: "cam082",
+        name: "Gonsiori tn – Pronksi tn (suund Politsei park)",
+      },
+    ],
+  },
+  {
+    id: "pronksi-raua",
+    name: "Pronksi tn – Raua tn",
+    coordinates: [24.76465, 59.43561],
+    cameras: [
+      {
+        id: "cam140",
+        name: "Pronksi tn – Raua tn (suund Ahtri tn)",
+      },
+      {
+        id: "cam150",
+        name: "Pronksi tn – Raua tn (suund Liivalaia tn)",
+      },
+    ],
+  },
+  {
+    id: "gonsiori-kreutzwaldi",
+    name: "Gonsiori tn – F. R. Kreutzwaldi tn",
+    coordinates: [24.76852, 59.43424],
+    cameras: [
+      {
+        id: "cam154",
+        name: "Gonsiori tn – F. R. Kreutzwaldi tn (suund kesklinn)",
+      },
+      {
+        id: "cam155",
+        name: "Gonsiori tn – F. R. Kreutzwaldi tn (suund Lasnamäe)",
+      },
+    ],
+  },
+  {
+    id: "gonsiori-vilmsi",
+    name: "Gonsiori tn – Vilmsi tn",
+    coordinates: [24.77859, 59.43299],
+    cameras: [
+      {
+        id: "cam152",
+        name: "Gonsiori tn – Vilmsi tn (suund kesklinn)",
+      },
+      {
+        id: "cam151",
+        name: "Gonsiori tn – Vilmsi tn (suund Lasnamäe)",
+      },
+    ],
+  },
+  {
+    id: "gonsiori-laagna",
+    name: "Gonsiori tn – Laagna tee",
+    coordinates: [24.78489, 59.43198],
+    cameras: [
+      {
+        id: "cam156",
+        name: "Gonsiori tn – Laagna tee (suund kesklinn)",
+      },
+      {
+        id: "cam153",
+        name: "Gonsiori tn – Laagna tee (suund Lasnamäe)",
+      },
+    ],
+  },
+  // Tartu mnt from Liivalaia tn to the bus station.
+  {
+    id: "tartu-pronksi-liivalaia",
+    name: "Tartu mnt – Pronksi tn / Liivalaia tn – Rävala pst",
+    coordinates: [24.76319, 59.43286],
+    cameras: [
+      {
+        id: "cam008",
+        name: "Tartu mnt – Pronksi tn",
+      },
+      {
+        id: "cam080",
+        name: "Liivalaia tn – Rävala pst",
+      },
+    ],
+  },
+  {
+    id: "tartu-kreutzwaldi",
+    name: "Tartu mnt – F. R. Kreutzwaldi tn",
+    coordinates: [24.76703, 59.43184],
+    cameras: [
+      {
+        id: "cam081",
+        name: "Tartu mnt – F. R. Kreutzwaldi tn",
+      },
+    ],
+  },
+  {
+    id: "tartu-odra-turnpu",
+    name: "Tartu mnt – Odra tn – Türnpu tn",
+    coordinates: [24.77588, 59.42852],
+    cameras: [
+      {
+        id: "cam037",
+        name: "Tartu mnt – Odra tn – Türnpu tn",
+      },
+      {
+        id: "cam038",
+        name: "Tartu mnt – Odra tn – Türnpu tn (bussijaam)",
+      },
+      {
+        id: "cam039",
+        name: "Tartu mnt – Odra tn – Türnpu tn (suund Tartu)",
+      },
+    ],
+  },
+  {
+    id: "tartu-lubja",
+    name: "Tartu mnt – Lubja tn",
+    coordinates: [24.77841, 59.42754],
+    cameras: [
+      {
+        id: "cam188",
+        name: "Tartu mnt – Lubja tn (suund kesklinn)",
+      },
+    ],
+  },
+  {
+    id: "odra-lastekodu",
+    name: "Odra tn – Lastekodu tn",
+    coordinates: [24.77426, 59.42777],
+    cameras: [
+      {
+        id: "cam044",
+        name: "Odra tn – Lastekodu tn (suund bussijaam)",
+      },
+    ],
+  },
+  {
+    id: "turnpu-kunderi",
+    name: "Türnpu tn – Kunderi tn",
+    coordinates: [24.77796, 59.43029],
+    cameras: [
+      {
+        id: "cam042",
+        name: "Türnpu tn – Kunderi tn (suund kesklinn)",
+      },
+      {
+        id: "cam043",
+        name: "Türnpu tn – Kunderi tn (suund Laagna tee)",
+      },
+    ],
+  },
 ];
