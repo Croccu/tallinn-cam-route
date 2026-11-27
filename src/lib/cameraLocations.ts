@@ -847,4 +847,404 @@ export const CAMERA_LOCATIONS: CameraLocation[] = [
       },
     ],
   },
+  // Tartu mnt from Peterburi tee out to Mõigu.
+  {
+    id: "tartu-peterburi",
+    name: "Tartu mnt – Peterburi tee",
+    coordinates: [24.78574, 59.42396],
+    cameras: [
+      {
+        id: "cam009",
+        name: "Tartu mnt (suund Sikupilli) – Peterburi tee",
+      },
+      {
+        id: "cam084",
+        name: "Tartu mnt – Peterburi tee",
+      },
+    ],
+  },
+  {
+    id: "tartu-jarvevana-suur-sojamae",
+    name: "Tartu mnt – Järvevana tee / Suur-Sõjamäe tn",
+    coordinates: [24.78813, 59.42239],
+    cameras: [
+      {
+        id: "cam078",
+        name: "Tartu mnt – Järvevana tee",
+      },
+      {
+        id: "cam079",
+        name: "Tartu mnt – Suur-Sõjamäe tn",
+      },
+    ],
+  },
+  {
+    id: "tartu-lennujaama",
+    name: "Tartu mnt – Lennujaama tee",
+    coordinates: [24.79165, 59.41998],
+    cameras: [
+      {
+        id: "cam005",
+        name: "Tartu mnt (suund kesklinn) – Lennujaama tee",
+      },
+      {
+        id: "cam006",
+        name: "Tartu mnt (suund Tartu) – Lennujaama tee",
+      },
+    ],
+  },
+  {
+    id: "tartu-vana-tartu",
+    name: "Tartu mnt – Vana-Tartu mnt",
+    coordinates: [24.80162, 59.41181],
+    cameras: [
+      {
+        id: "cam136",
+        name: "Tartu mnt – Vana-Tartu mnt",
+      },
+    ],
+  },
+  {
+    id: "tartu-kanali",
+    name: "Tartu mnt – Kanali tee",
+    coordinates: [24.80634, 59.40805],
+    cameras: [
+      {
+        id: "cam137",
+        name: "Tartu mnt – Kanali tee",
+      },
+    ],
+  },
+  {
+    id: "tartu-moigu",
+    name: "Tartu mnt – Mõigu tee",
+    coordinates: [24.81343, 59.40221],
+    cameras: [
+      {
+        id: "cam047",
+        name: "Tartu mnt (suund kesklinn) – Mõigu tee",
+      },
+      {
+        id: "cam048",
+        name: "Tartu mnt (suund Tartu) – Mõigu tee",
+      },
+    ],
+  },
+  // Liivalaia tn, Juhkentali tn and Filtri tee.
+  {
+    id: "liivalaia-juhkentali-lembitu",
+    name: "Liivalaia tn – Juhkentali tn – Lembitu tn",
+    coordinates: [24.75702, 59.42953],
+    cameras: [
+      {
+        id: "cam112",
+        name: "Liivalaia tn (suund Pärnu mnt) – Juhkentali tn – Lembitu tn",
+      },
+      {
+        id: "cam113",
+        name: "Liivalaia tn – Juhkentali tn (suund Juhkentali) – Lembitu tn",
+      },
+      {
+        id: "cam114",
+        name: "Liivalaia tn – Juhkentali tn – Lembitu tn (suund Lembitu)",
+      },
+    ],
+  },
+  {
+    id: "juhkentali-filtri-odra",
+    name: "Juhkentali tn – Filtri tee – Odra tn",
+    coordinates: [24.77153, 59.427],
+    cameras: [
+      {
+        id: "cam099",
+        name: "Juhkentali tn – Filtri tee – Odra tn (suund Lasnamäe)",
+      },
+      {
+        id: "cam100",
+        name: "Juhkentali tn – Filtri tee",
+      },
+    ],
+  },
+  // Lasnamäe: Peterburi tee, Smuuli tee, Laagna tee and Ussimäe tee.
+  {
+    id: "narva-turba",
+    name: "Narva mnt – Turba tn",
+    coordinates: [24.81462, 59.44475],
+    cameras: [
+      {
+        id: "cam051",
+        name: "Narva mnt (suund kesklinn) – Turba tn",
+      },
+    ],
+  },
+  {
+    id: "pae-peterburi",
+    name: "Pae tn – Peterburi tee",
+    coordinates: [24.80045, 59.42602],
+    cameras: [
+      {
+        id: "cam115",
+        name: "Pae tn – Peterburi tee",
+      },
+    ],
+  },
+  {
+    id: "smuuli-punane",
+    name: "Smuuli tee – Punane tn",
+    coordinates: [24.83106, 59.43395],
+    cameras: [
+      {
+        id: "cam117",
+        name: "Smuuli tee – Punane tn (suund kesklinn)",
+      },
+      {
+        id: "cam118",
+        name: "Smuuli tee – Punane tn (suund Narva)",
+      },
+    ],
+  },
+  {
+    id: "peterburi-smuuli",
+    name: "Peterburi tee – Smuuli tee",
+    coordinates: [24.83531, 59.42922],
+    cameras: [
+      {
+        id: "cam091",
+        name: "Peterburi tee (suund kesklinn) – Smuuli tee",
+      },
+      {
+        id: "cam092",
+        name: "Peterburi tee (suund Narva) – Smuuli tee",
+      },
+    ],
+  },
+  {
+    id: "suur-sojamae-smuuli",
+    name: "Suur-Sõjamäe tn – Smuuli tee",
+    coordinates: [24.84481, 59.41578],
+    cameras: [
+      {
+        id: "cam090",
+        name: "Suur-Sõjamäe tn – Smuuli tee",
+      },
+    ],
+  },
+  {
+    id: "laagna-mustakivi",
+    name: "Laagna tee – Mustakivi tee",
+    coordinates: [24.86663, 59.44208],
+    cameras: [
+      {
+        id: "cam217",
+        name: "Laagna tee – Mustakivi tee (suund kesklinn)",
+      },
+      {
+        id: "cam131",
+        name: "Laagna tee – Mustakivi tee (suund Peterburi tee)",
+      },
+      {
+        id: "cam216",
+        name: "Laagna tee – Mustakivi tee (suund Narva mnt)",
+      },
+    ],
+  },
+  {
+    id: "laagna-karberi",
+    name: "Laagna tee – Kärberi tn",
+    coordinates: [24.89748, 59.44686],
+    cameras: [
+      {
+        id: "cam224",
+        name: "Laagna tee – Kärberi tn (suund kesklinn)",
+      },
+      {
+        id: "cam225",
+        name: "Laagna tee – Kärberi tn (suund Peterburi tee)",
+      },
+    ],
+  },
+  {
+    id: "ussimae-priisle",
+    name: "Ussimäe tee – Priisle tee",
+    coordinates: [24.89178, 59.45211],
+    cameras: [
+      {
+        id: "cam230",
+        name: "Ussimäe tee (suund Pärnamäe) – Priisle tee",
+      },
+      {
+        id: "cam231",
+        name: "Ussimäe tee (suund Kärberi tn) – Priisle tee",
+      },
+    ],
+  },
+  {
+    id: "ussimae-narva",
+    name: "Ussimäe tee – Narva mnt",
+    coordinates: [24.89502, 59.45456],
+    cameras: [
+      {
+        id: "cam249",
+        name: "Ussimäe tee – Narva mnt",
+      },
+    ],
+  },
+  {
+    id: "peterburi-vao",
+    name: "Peterburi tee – Väo tee",
+    coordinates: [24.89685, 59.44084],
+    cameras: [
+      {
+        id: "cam097",
+        name: "Peterburi tee (suund kesklinn) – Väo tee",
+      },
+    ],
+  },
+  // Pärnu mnt south through Nõmme to Pääsküla, with Viljandi mnt.
+  {
+    id: "parnu-tondi",
+    name: "Pärnu mnt – Tondi tn",
+    coordinates: [24.73935, 59.41476],
+    cameras: [
+      {
+        id: "cam096",
+        name: "Pärnu mnt – Tondi tn",
+      },
+    ],
+  },
+  {
+    id: "parnu-saku",
+    name: "Pärnu mnt – Saku tn",
+    coordinates: [24.73689, 59.41003],
+    cameras: [
+      {
+        id: "cam105",
+        name: "Pärnu mnt – Saku tn",
+      },
+    ],
+  },
+  {
+    id: "parnu-kohila",
+    name: "Pärnu mnt – Kohila tn",
+    coordinates: [24.73632, 59.40945],
+    cameras: [
+      {
+        id: "cam106",
+        name: "Pärnu mnt – Kohila tn",
+      },
+    ],
+  },
+  {
+    id: "parnu-jarvevana",
+    name: "Pärnu mnt – Järvevana tee",
+    coordinates: [24.72983, 59.40297],
+    cameras: [
+      {
+        id: "cam087",
+        name: "Pärnu mnt (suund kesklinn) – Järvevana tee",
+      },
+      {
+        id: "cam088",
+        name: "Pärnu mnt (suund Pärnu) – Järvevana tee",
+      },
+      {
+        id: "cam089",
+        name: "Pärnu mnt – Järvevana tee (suund Lasnamäe)",
+      },
+      {
+        id: "cam123",
+        name: "Pärnu mnt – Järvevana tee (suund Neste)",
+      },
+      {
+        id: "cam164",
+        name: "Pärnu mnt – Järvevana tee (suund Neste) 2",
+      },
+    ],
+  },
+  {
+    id: "parnu-viljandi",
+    name: "Pärnu mnt – Viljandi mnt",
+    coordinates: [24.72475, 59.39381],
+    cameras: [
+      {
+        id: "cam095",
+        name: "Pärnu mnt – Viljandi mnt",
+      },
+      {
+        id: "cam053",
+        name: "Pärnu mnt (suund kesklinn) – Viljandi mnt",
+      },
+    ],
+  },
+  {
+    id: "parnu-manniku",
+    name: "Pärnu mnt – Männiku tee",
+    coordinates: [24.72269, 59.39224],
+    cameras: [
+      {
+        id: "cam052",
+        name: "Pärnu mnt – Männiku tee (suund Nõmme)",
+      },
+    ],
+  },
+  {
+    id: "vabaduse-manniku",
+    name: "Vabaduse pst – Männiku tee",
+    coordinates: [24.71887, 59.38827],
+    cameras: [
+      {
+        id: "cam107",
+        name: "Vabaduse pst – Männiku tee (suund kesklinn)",
+      },
+      {
+        id: "cam108",
+        name: "Vabaduse pst – Männiku tee (suund Pärnu)",
+      },
+    ],
+  },
+  {
+    id: "manniku-valdeku",
+    name: "Männiku tee – Valdeku tn",
+    coordinates: [24.71792, 59.37522],
+    cameras: [
+      {
+        id: "cam204",
+        name: "Männiku tee – Valdeku tn (suund kesklinn)",
+      },
+      {
+        id: "cam205",
+        name: "Männiku tee – Valdeku tn (suund Viljandi mnt)",
+      },
+    ],
+  },
+  {
+    id: "viljandi-valdeku",
+    name: "Viljandi mnt – Valdeku tn",
+    coordinates: [24.7465, 59.3765],
+    cameras: [
+      {
+        id: "cam058",
+        name: "Viljandi mnt (suund kesklinn) – Valdeku tn",
+      },
+      {
+        id: "cam059",
+        name: "Viljandi mnt – Valdeku tn (suund Rapla)",
+      },
+    ],
+  },
+  {
+    id: "parnu-vabaduse",
+    name: "Pärnu mnt – Vabaduse pst",
+    coordinates: [24.62988, 59.36079],
+    cameras: [
+      {
+        id: "cam093",
+        name: "Pärnu mnt (suund kesklinn) – Vabaduse pst",
+      },
+      {
+        id: "cam094",
+        name: "Pärnu mnt (suund Pärnu) – Vabaduse pst",
+      },
+    ],
+  },
 ];
